@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--web font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap"
+          rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- 구글 맵 API -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script> function initMap() { const pos = { lat: 37.547053436841864, lng: 126.96468087116442 };
+        const map = new google.maps.Map(document.getElementById("map"), { zoom: 18, center: pos});
+        const marker = new google.maps.Marker({position: pos, map: map,});} </script>
+    <title>STOP, NS!</title>
+    <style>
+        h1, #state{font-family: 'Noto Sans KR', sans-serif; text-align: center; margin-top: 30px; margin-bottom: 30px}
+        #map {width: 50%; height: 50%; margin: auto}  html, body { height: 100%; margin: 0; padding: 0;}
+    </style>
+    <body>
+        <h1>낙상, 멈춰!</h1>
+        <hr style="margin-bottom: 30px">
+        <div id="map"></div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8mnBjnDOITGMexcG2cBMlrwsBXJXHEdA&callback=initMap&v=weekly" async></script>
+        <div class="card bg-light mb-3" style="max-width: 80%; margin: 30px auto">
+        <div id="state" style="font-size: large"><span>정지수</span><span>님의 현재 상태는 </span><span>danger</span><span>입니다.</span></div>
+        </div>
+    </body>
+</html>
