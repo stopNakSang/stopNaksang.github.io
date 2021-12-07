@@ -21,6 +21,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+    <!-- 카카오 API -->
+    <script type="text/JavaScript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    
     <!-- 구글 맵 API -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script> function initMap() { const pos = { lat: 37.547053436841864, lng: 126.96468087116442 };
@@ -32,6 +35,16 @@
         #map {width: 50%; height: 50%; margin: auto}  html, body { height: 100%; margin: 0; padding: 0;}
     </style>
     <body>
+        <input type="button" onClick="sendLinkCustom();" value="Custom"/>
+        <script type="text/javascript">
+            function sendLinkCustom() {
+                Kakao.init("4992e034db5f2c572f9d0bfb176920a3");
+                Kakao.Link.sendCustom({
+                templateId: 66523
+            });
+        }
+        </script>
+          
         <h1>낙상, 멈춰!</h1>
         <hr style="margin-bottom: 30px">
         <div id="map"></div>
