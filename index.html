@@ -33,9 +33,10 @@
     <style>
         h1, #state{font-family: 'Noto Sans KR', sans-serif; text-align: center; margin-top: 30px; margin-bottom: 30px}
         #map {width: 50%; height: 50%; margin: auto}  html, body { height: 100%; margin: 0; padding: 0;}
+        button{display:block,margin:auto}
     </style>
     <body>
-        <input type="button" onClick="sendLinkCustom();" value="Custom"/>
+        
         <script type="text/javascript">
             function sendLinkCustom() {
                 Kakao.init("4992e034db5f2c572f9d0bfb176920a3");
@@ -51,6 +52,7 @@
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8mnBjnDOITGMexcG2cBMlrwsBXJXHEdA&callback=initMap&v=weekly" async></script>
         <div class="card bg-light mb-3" style="max-width: 80%; margin: 30px auto">
         <div id="state" style="font-size: large"><span>정지수</span><span>님의 현재 상태는 </span><span>danger</span><span>입니다.</span></div>
+        <button type="button" onClick="sendLinkCustom();" class="btn btn-secondary">카카오 보내기</button>
         </div>
     </body>
 </html>
